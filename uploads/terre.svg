@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="ขวดน้ำหอม">
+  <defs>
+    <linearGradient id="b1bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7ecdc"/><stop offset="1" stop-color="#ead2ae"/>
+    </linearGradient>
+    <linearGradient id="b1liq" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e08a3c"/><stop offset="1" stop-color="#9c4a12"/>
+    </linearGradient>
+    <linearGradient id="b1glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".35" stop-color="#ffffff" stop-opacity=".12"/>
+      <stop offset=".7" stop-color="#ffffff" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".4"/>
+    </linearGradient>
+    <linearGradient id="b1cap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity=".28"/>
+      <stop offset=".35" stop-color="#fff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".35"/>
+    </linearGradient>
+    <radialGradient id="b1sh" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#000" stop-opacity=".30"/><stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="b1clip"><path d="M255 250 h90 q130 20 130 160 q0 110 -175 110 q-175 0 -175 -110 q0 -140 130 -160 z"/></clipPath>
+  </defs>
+  <rect width="600" height="600" fill="url(#b1bg)"/>
+  <circle cx="300" cy="330" r="230" fill="#ffffff" opacity=".35"/>
+  <ellipse cx="300" cy="540" rx="190" ry="20" fill="url(#b1sh)"/>
+  <!-- ตัวขวด -->
+  <path d="M255 250 h90 q130 20 130 160 q0 110 -175 110 q-175 0 -175 -110 q0 -140 130 -160 z" fill="#ffffff" fill-opacity=".45" stroke="#d9a96a" stroke-width="3"/>
+  <path d="M258 286 h84 q112 18 112 124 q0 96 -154 96 q-154 0 -154 -96 q0 -106 112 -124 z" fill="url(#b1liq)"/>
+  <g clip-path="url(#b1clip)">
+    <rect x="120" y="230" width="360" height="320" fill="url(#b1glass)"/>
+    <ellipse cx="228" cy="400" rx="14" ry="110" fill="#fff" opacity=".35" transform="rotate(4 228 400)"/>
+  </g>
+  <!-- ป้ายชื่อ -->
+  <rect x="225.0" y="376" width="150" height="68" rx="4" fill="#fffdf7" fill-opacity=".92" stroke="#d9a96a" stroke-width="1.5"/>
+  <text x="300" y="406" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="7" fill="#3b3326">VELORE</text>
+  <text x="300" y="428" text-anchor="middle" font-family="Georgia, serif" font-size="10" letter-spacing="4" fill="#8c7447">PARFUM</text>
+  <!-- ฝา -->
+  <rect x="268" y="168" width="64" height="84" rx="8" fill="#6b4a2b"/>
+  <rect x="268" y="168" width="64" height="84" rx="8" fill="url(#b1cap)"/>
+  <rect x="272" y="242" width="56" height="10" rx="3" fill="#000" opacity=".18"/>
+</svg>

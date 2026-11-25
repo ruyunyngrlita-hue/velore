@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#f3ede4"/>
+  <rect x="115" y="110" width="70" height="120" rx="10" fill="#d9c7a8" stroke="#b39a6b" stroke-width="3"/>
+  <rect x="135" y="80" width="30" height="30" rx="4" fill="#b39a6b"/>
+  <rect x="142" y="62" width="16" height="18" rx="3" fill="#8c7447"/>
+  <text x="150" y="275" font-family="Georgia, serif" font-size="18" text-anchor="middle" fill="#8c7447" letter-spacing="4">VELORE</text>
+</svg>

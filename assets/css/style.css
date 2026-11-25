@@ -1,0 +1,344 @@
+:root {
+    --ink: #1f1b16;
+    --muted: #7a6f60;
+    --gold: #a88a4e;
+    --gold-dark: #8c7447;
+    --cream: #faf6ef;
+    --line: #e7dfd0;
+    --white: #ffffff;
+    --danger: #b3382c;
+    --ok: #2f7d4f;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: 'Noto Sans Thai', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+}
+a { color: var(--gold-dark); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { width: min(1100px, 92%); margin: 0 auto; }
+main.container { padding: 32px 0 56px; min-height: 60vh; }
+
+/* Header */
+.site-header { background: var(--ink); color: #fff; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; flex-wrap: wrap; gap: 10px; }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 2rem; letter-spacing: 0.35em; color: #fff; }
+.logo:hover { text-decoration: none; }
+.main-nav { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+.main-nav a { color: #e9dfc9; font-size: 0.95rem; }
+.cart-badge { background: var(--gold); color: #fff; border-radius: 999px; padding: 1px 8px; font-size: 0.8rem; }
+
+/* Footer */
+.site-footer { background: var(--ink); color: #b9ae9b; text-align: center; padding: 28px 0; font-size: 0.9rem; }
+.site-footer .logo-small { font-family: 'Cormorant Garamond', serif; letter-spacing: 0.3em; color: #fff; font-size: 1.3rem; margin: 0 0 6px; }
+
+/* Headings */
+h1, h2, h3 { font-family: 'Cormorant Garamond', 'Noto Sans Thai', serif; font-weight: 600; }
+h1 { font-size: 2rem; margin: 0 0 20px; }
+h2 { font-size: 1.6rem; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+
+/* Hero */
+.hero { text-align: center; padding: 40px 0 10px; }
+.hero p { color: var(--muted); }
+
+/* Filter */
+.filter-bar { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 16px 0 8px; }
+.chip { padding: 6px 18px; border: 1px solid var(--gold); border-radius: 999px; color: var(--gold-dark); font-size: 0.9rem; background: var(--white); }
+.chip.active, .chip:hover { background: var(--gold); color: #fff; text-decoration: none; }
+
+/* Product grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 22px; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+.card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; background: #f3ede4; }
+.card-body { padding: 14px 16px 18px; display: flex; flex-direction: column; flex: 1; }
+.card .brand { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+.card .name { font-weight: 500; margin: 2px 0 4px; color: var(--ink); }
+.card .notes { font-size: 0.82rem; color: var(--muted); flex: 1; }
+.card .price { font-weight: 600; color: var(--gold-dark); margin: 10px 0; font-size: 1.1rem; }
+.badge-out { color: var(--danger); font-size: 0.85rem; }
+
+/* Buttons */
+.btn { display: inline-block; padding: 9px 20px; border: 0; border-radius: 6px; background: var(--gold); color: #fff; cursor: pointer; font-family: inherit; font-size: 0.95rem; }
+.btn:hover { background: var(--gold-dark); text-decoration: none; }
+.btn-dark { background: var(--ink); }
+.btn-danger { background: var(--danger); }
+.btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold-dark); }
+.btn-sm { padding: 5px 12px; font-size: 0.85rem; }
+.btn[disabled] { background: #ccc; cursor: not-allowed; }
+
+/* Alerts */
+.alert { padding: 12px 16px; border-radius: 6px; margin-bottom: 20px; }
+.alert-success { background: #e4f3ea; color: var(--ok); border: 1px solid #bfe0cb; }
+.alert-error { background: #fbe9e7; color: var(--danger); border: 1px solid #f1c3bd; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; background: var(--white); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th { background: #f3ede4; font-weight: 500; font-size: 0.9rem; }
+td.num, th.num { text-align: right; }
+.thumb { width: 56px; height: 56px; object-fit: cover; border-radius: 6px; background: #f3ede4; }
+.qty-input { width: 64px; padding: 6px; border: 1px solid var(--line); border-radius: 4px; }
+
+/* Forms */
+.form-box { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 24px; max-width: 640px; }
+label { display: block; margin: 14px 0 4px; font-weight: 500; font-size: 0.92rem; }
+input[type=text], input[type=password], input[type=number], input[type=tel], input[type=file], select, textarea {
+    width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; font-family: inherit; font-size: 1rem; background: #fff;
+}
+textarea { min-height: 100px; resize: vertical; }
+
+/* Two column */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+.two-col img { width: 100%; border-radius: 10px; border: 1px solid var(--line); }
+.cart-summary { text-align: right; margin-top: 18px; font-size: 1.2rem; }
+.checkout-layout { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: start; }
+
+/* Status labels */
+.status { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.8rem; background: #eee; }
+.status-pending { background: #fdf1d3; color: #8a6a12; }
+.status-paid { background: #dcebfa; color: #1d5a9b; }
+.status-shipped { background: #e6defa; color: #5a3fa0; }
+.status-completed { background: #e4f3ea; color: var(--ok); }
+.status-cancelled { background: #fbe9e7; color: var(--danger); }
+
+/* Admin */
+.admin-bar { background: #2a241c; color: #fff; }
+.admin-bar .container { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; flex-wrap: wrap; gap: 10px; }
+.admin-bar a { color: #e9dfc9; margin-right: 18px; }
+.admin-bar strong { letter-spacing: 0.2em; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; flex-wrap: wrap; gap: 10px; }
+.login-box { max-width: 380px; margin: 60px auto; }
+.inline-form { display: inline; }
+
+@media (max-width: 760px) {
+    .two-col, .checkout-layout { grid-template-columns: 1fr; }
+    table { font-size: 0.88rem; }
+    th, td { padding: 8px; }
+}
+
+/* =====================================================
+   หน้าร้านเวอร์ชัน 2 : แถบบน, ค้นหา, แบนเนอร์, การ์ดสินค้า, หน้ารายละเอียด
+   ===================================================== */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.topbar { background: var(--gold); color: #fff; text-align: center; font-size: .82rem; padding: 6px 12px; }
+
+.site-header { position: sticky; top: 0; z-index: 30; }
+.header-inner { gap: 16px; flex-wrap: nowrap; }
+.header-search { flex: 1; display: flex; max-width: 520px; }
+.header-search input { flex: 1; min-width: 0; padding: 9px 14px; border: 1px solid #4a4236; border-right: 0; border-radius: 6px 0 0 6px; background: #2a251d; color: #fff; font-family: inherit; }
+.header-search input::placeholder { color: #9a8f7b; }
+.header-search button { padding: 0 16px; border: 0; border-radius: 0 6px 6px 0; background: var(--gold); color: #fff; cursor: pointer; font-family: inherit; }
+.header-search button:hover { background: var(--gold-dark); }
+.cart-link { color: #fff; white-space: nowrap; }
+.cart-link:hover { text-decoration: none; }
+.main-nav-bar { background: #2a251d; border-top: 1px solid #3a3429; }
+.main-nav-bar .main-nav { gap: 4px; padding: 0; overflow-x: auto; }
+.main-nav-bar .main-nav a { padding: 10px 16px; white-space: nowrap; font-size: .92rem; }
+.main-nav-bar .main-nav a:hover { background: #3a3429; text-decoration: none; }
+
+/* แบนเนอร์หลัก */
+.hero-banner { background: linear-gradient(120deg, #14110d 0%, #2d2417 60%, #4a3a1d 100%); color: #fff; border-radius: 14px; padding: 56px 44px; margin-bottom: 20px; position: relative; overflow: hidden; }
+.hero-banner::after { content: ''; position: absolute; right: -60px; top: -60px; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,92,.35), transparent 68%); }
+.hero-text { position: relative; max-width: 560px; z-index: 1; }
+.hero-kicker { color: var(--gold); letter-spacing: .3em; font-size: .78rem; }
+.hero-banner h1 { font-size: 2.6rem; line-height: 1.2; margin: 10px 0 14px; color: #fff; }
+.hero-banner p { color: #d6cbb4; margin: 0 0 24px; }
+.btn-gold { background: #c9a85c; color: #1f1b16; font-weight: 600; padding: 11px 28px; }
+.btn-gold:hover { background: #e0c27a; }
+.trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 8px; }
+.trust-strip div { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.trust-strip strong { display: block; color: var(--gold-dark); }
+.trust-strip span { font-size: .82rem; color: var(--muted); }
+
+/* แถบกรอง + เรียง */
+.shop-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin: 22px 0 6px; scroll-margin-top: 130px; }
+.shop-head .filter-bar { margin: 0; justify-content: flex-start; }
+.sort-form select { width: auto; padding: 8px 12px; }
+.result-note { color: var(--muted); margin: 8px 0 0; }
+.empty-state { text-align: center; padding: 56px 0; color: var(--muted); }
+
+/* การ์ดสินค้า */
+.card { transition: box-shadow .2s, transform .2s; }
+.card:hover { box-shadow: 0 8px 24px rgba(60,45,20,.12); transform: translateY(-2px); }
+.card-img { position: relative; display: block; background: #f3ede4; }
+.card-img img { display: block; }
+.ribbon { position: absolute; font-size: .72rem; padding: 2px 10px; border-radius: 999px; color: #fff; }
+.ribbon-cat { top: 10px; left: 10px; background: rgba(31,27,22,.75); }
+.ribbon-low { bottom: 10px; left: 10px; background: #c26a12; }
+.ribbon-out { bottom: 10px; left: 10px; background: var(--danger); }
+.card-out img { opacity: .5; filter: grayscale(.6); }
+.btn-block-sm { width: 100%; text-align: center; }
+.tag { display: inline-block; padding: 2px 11px; border-radius: 999px; font-size: .8rem; background: #efe7d6; color: var(--gold-dark); }
+
+/* หน้ารายละเอียดสินค้า */
+.breadcrumb { font-size: .88rem; color: var(--muted); margin-bottom: 18px; }
+.product-photo img { width: 100%; border-radius: 12px; border: 1px solid var(--line); background: #f3ede4; }
+.brand-line { text-transform: uppercase; letter-spacing: .14em; color: var(--muted); font-size: .85rem; }
+.product-detail h1 { margin: 4px 0 12px; }
+.detail-price { font-size: 1.8rem; font-weight: 600; color: var(--gold-dark); margin: 8px 0; }
+.stock-line { margin: 0 0 14px; font-weight: 500; }
+.stock-line.stock-ok { color: var(--ok); }
+.stock-line.stock-low { color: #c26a12; }
+.stock-line.stock-out { color: var(--danger); }
+.buy-form { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.buy-form label { margin: 0; }
+.detail-h { margin: 26px 0 8px; font-size: 1.2rem; }
+.note-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 0; }
+
+/* ท้ายเว็บ */
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; text-align: left; padding-bottom: 18px; }
+.footer-grid strong { display: block; color: #fff; margin-bottom: 8px; }
+.footer-grid a { display: block; color: #b9ae9b; padding: 2px 0; }
+.footer-grid a:hover { color: #fff; }
+.copyright { border-top: 1px solid #3a3429; padding-top: 14px; margin: 0; }
+
+@media (max-width: 760px) {
+    .header-inner { flex-wrap: wrap; }
+    .header-search { order: 3; flex-basis: 100%; max-width: none; }
+    .hero-banner { padding: 36px 22px; }
+    .hero-banner h1 { font-size: 1.9rem; }
+    .trust-strip { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .site-header { position: static; }
+}
+
+/* แก้ไขเพิ่มเติม */
+input.qty-input { width: 84px; }
+.main-nav-bar .main-nav { flex-wrap: nowrap; }
+.hero-banner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.hero-img { position: relative; z-index: 1; width: 300px; height: 300px; object-fit: cover; border-radius: 16px; border: 1px solid rgba(201,168,92,.45); box-shadow: 0 18px 40px rgba(0,0,0,.45); flex: 0 0 auto; }
+@media (max-width: 860px) { .hero-img { display: none; } }
+
+/* =====================================================
+   ระบบสมาชิก / สั่งซื้อ / ติดตามสถานะ / โปรโมชั่น
+   ===================================================== */
+.muted { color: var(--muted); }
+
+/* เมนูผู้ใช้ในหัวเว็บ */
+.header-user { display: flex; align-items: center; gap: 14px; white-space: nowrap; }
+.header-user > a:not(.btn) { color: #e9dfc9; font-size: .92rem; }
+.header-user .btn-sm { padding: 6px 14px; }
+.user-menu { position: relative; }
+.user-menu summary { cursor: pointer; color: #f1dfb2; font-size: .92rem; list-style: none; padding: 6px 0; }
+.user-menu summary::-webkit-details-marker { display: none; }
+.user-menu summary::after { content: ' ▾'; font-size: .75rem; }
+.user-menu-list { position: absolute; right: 0; top: 100%; background: #fff; border: 1px solid var(--line); border-radius: 8px; min-width: 190px; box-shadow: 0 10px 28px rgba(0,0,0,.2); z-index: 50; overflow: hidden; }
+.user-menu-list a { display: block; padding: 10px 16px; color: var(--ink); font-size: .92rem; }
+.user-menu-list a:hover { background: #f3ede4; text-decoration: none; }
+
+/* หน้าสมัคร/เข้าสู่ระบบ/บัญชี */
+.auth-wrap { display: flex; justify-content: center; padding: 10px 0 20px; }
+.auth-box { width: min(460px, 100%); border-top: 4px solid var(--gold); }
+.auth-box h1 { margin-bottom: 6px; }
+.auth-alt { text-align: center; margin: 18px 0 0; font-size: .92rem; }
+.account-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.form-box input:disabled { background: #f3ede4; color: var(--muted); }
+
+/* ตะกร้า: ปุ่ม + / − */
+.qty-step { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fff; }
+.step-btn { width: 34px; height: 34px; border: 0; background: #f3ede4; color: var(--ink); font-size: 1.1rem; cursor: pointer; font-family: inherit; }
+.step-btn:hover:not([disabled]) { background: var(--gold); color: #fff; }
+.step-btn[disabled] { color: #bbb; cursor: not-allowed; }
+.step-qty { min-width: 40px; text-align: center; font-weight: 500; }
+
+/* สั่งซื้อ: ตัวเลือกชำระเงิน */
+.check-line { display: flex; align-items: center; gap: 8px; font-weight: 400; margin-top: 14px; }
+.check-line input { width: auto; }
+.pay-options { display: grid; gap: 10px; }
+.pay-option { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; margin: 0; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; font-weight: 400; background: #fff; }
+.pay-option:has(input:checked) { border-color: var(--gold); background: #fbf6ea; box-shadow: 0 0 0 1px var(--gold) inset; }
+.pay-option input { width: auto; margin-top: 4px; }
+.pay-option small { display: block; color: var(--muted); }
+.sum-line { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+.pay-info { background: #fbf6ea; border: 1px solid #e9d9b0; border-radius: 10px; padding: 14px 18px; }
+.pay-info p { margin: 8px 0 0; }
+.order-no { color: var(--gold-dark); font-size: 1.3rem; }
+
+/* แถบสถานะคำสั่งซื้อ */
+.steps { list-style: none; display: flex; padding: 0; margin: 0 0 26px; counter-reset: s; }
+.steps li { flex: 1; text-align: center; position: relative; color: var(--muted); font-size: .85rem; }
+.steps li::before { content: ''; position: absolute; top: 15px; left: -50%; width: 100%; height: 3px; background: var(--line); z-index: 0; }
+.steps li:first-child::before { display: none; }
+.steps li.done::before, .steps li.current::before { background: var(--gold); }
+.steps .dot { position: relative; z-index: 1; display: inline-flex; width: 32px; height: 32px; border-radius: 50%; align-items: center; justify-content: center; background: #fff; border: 2px solid var(--line); font-weight: 600; }
+.steps li.done .dot { background: var(--gold); border-color: var(--gold); color: #fff; }
+.steps li.current .dot { border-color: var(--gold); color: var(--gold-dark); box-shadow: 0 0 0 4px rgba(168,138,78,.22); }
+.steps li.current { color: var(--ink); font-weight: 600; }
+.steps .lbl { display: block; margin-top: 6px; }
+.status-preparing { background: #fde9d3; color: #a85a12; }
+
+/* โปรโมชั่นหน้าแรก */
+.promo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 20px 0 6px; }
+.promo { background: linear-gradient(135deg, #fffdf7, #f6ecd4); border: 1px solid #e6d5a8; border-radius: 12px; padding: 18px 20px; }
+.promo-tag { font-size: .68rem; letter-spacing: .22em; color: var(--gold-dark); }
+.promo h3 { margin: 4px 0 6px; font-size: 1.35rem; }
+.promo p { margin: 0 0 10px; color: #5a5040; font-size: .92rem; }
+.promo a { font-weight: 500; }
+
+@media (max-width: 860px) {
+    .account-grid { grid-template-columns: 1fr; }
+    .header-user { gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+}
+@media (max-width: 520px) {
+    .steps li { font-size: .72rem; }
+    .steps .dot { width: 28px; height: 28px; }
+    .steps li::before { top: 13px; }
+}
+
+/* ช่องกรอกชนิดอีเมล/ค้นหาในฟอร์ม ให้หน้าตาเหมือนช่องอื่น */
+.form-box input[type=email], .form-box input[type=search], .search-bar input[type=search] {
+    width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; font-family: inherit; font-size: 1rem; background: #fff;
+}
+
+/* ติดต่อเรา / นโยบาย / 404 */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 18px; }
+.contact-grid .form-box { max-width: none; padding: 18px 20px; }
+.contact-grid h3 { margin: 0 0 6px; font-size: 1rem; }
+.contact-grid p { margin: 0; }
+.policy { max-width: 760px; }
+.policy h2 { font-size: 1.15rem; margin: 26px 0 6px; }
+.policy ul { padding-left: 20px; }
+.error-page { padding: 60px 0; }
+.error-code { font-family: 'Cormorant Garamond', serif; font-size: 6rem; line-height: 1; margin: 0; color: var(--gold, #a88a4e); }
+
+/* สองภาษา / ยอดเงิน / ปักหมุด / สลิป */
+.lang-switch { font-size: .85rem; margin-right: 12px; color: #bdb3a2; white-space: nowrap; }
+.lang-switch a { color: #bdb3a2; text-decoration: none; padding: 0 3px; }
+.lang-switch a.on { color: #fff; font-weight: 600; border-bottom: 1px solid var(--gold); }
+.lang-switch span { opacity: .5; }
+.totals { margin-top: 10px; }
+.totals .sum-line { display: flex; justify-content: space-between; gap: 16px; padding: 4px 0; }
+.totals .sum-grand { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 10px; font-size: 1.15rem; }
+.totals .sum-hint { font-size: .8rem; color: var(--muted); text-align: right; }
+.cart-summary .totals { max-width: 360px; margin-left: auto; text-align: left; }
+.map-picker { margin: 14px 0; }
+#map-canvas { height: 280px; border: 1px solid var(--line); border-radius: 8px; z-index: 0; }
+.map-hint { margin: 2px 0 8px; font-size: .85rem; }
+.map-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0 0; }
+.slip-box { margin-top: 16px; padding: 14px 16px; border: 1px dashed var(--gold); border-radius: 8px; background: #fffdf8; }
+.slip-box h4 { margin: 0 0 8px; }
+.slip-ok { color: #2a7a4b; margin: 4px 0; }
+.slip-thumb { max-width: 220px; max-height: 300px; border: 1px solid var(--line); border-radius: 6px; margin-top: 6px; display: block; }
+.tag-slip { background: #e4f3ea; color: #2a7a4b; }
+.slip-box input[type=file] { width: 100%; padding: 8px 0; background: transparent; border: 0; }
+@media (max-width: 720px) { .lang-switch { margin-right: 6px; } #map-canvas { height: 240px; } }
+.status { font-family: 'Noto Sans Thai', system-ui, sans-serif; }
+
+/* ไทม์ไลน์พัสดุ (ขนส่งจำลอง) */
+.tracking { list-style: none; margin: 12px 0 8px; padding: 0 0 0 4px; border-left: 2px solid var(--line); }
+.tracking li { position: relative; padding: 0 0 14px 18px; }
+.tracking .t-dot { position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--line); border: 2px solid #fff; }
+.tracking li.now .t-dot { background: var(--gold); box-shadow: 0 0 0 3px rgba(168,138,78,.25); }
+.tracking li.now strong { color: var(--gold-dark); }
+
+/* QR พร้อมเพย์ */
+.qr-box { display: flex; gap: 18px; align-items: center; margin: 12px 0; padding: 14px; background: #fff; border: 1px solid var(--line); border-radius: 10px; flex-wrap: wrap; }
+.qr-img { width: 200px; max-width: 100%; flex: none; }
+.qr-img svg { width: 100%; height: auto; display: block; }
+.qr-text { flex: 1; min-width: 180px; }
+.qr-text p { margin: 6px 0; }
+.qr-amount { font-size: 1.5rem; font-weight: 600; }

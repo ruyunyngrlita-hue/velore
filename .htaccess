@@ -1,0 +1,11 @@
+# VELORE - ตั้งค่า Apache
+Options -Indexes
+
+# หน้า 404 สวย ๆ
+# ถ้าโฟลเดอร์เว็บไม่ได้ชื่อ velore ให้แก้ path ด้านล่างให้ตรงกับชื่อโฟลเดอร์ใน htdocs
+ErrorDocument 404 /velore/404.php
+
+# กันการเปิดไฟล์ที่ไม่ควรเข้าถึงโดยตรง
+<FilesMatch "\.(sql|md|log)$">
+    Require all denied
+</FilesMatch>

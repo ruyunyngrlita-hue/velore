@@ -1,0 +1,99 @@
+/* =====================================================
+   VELORE Admin – ธีมดำ / ครีม / ทอง  (ใช้ซ้อนทับ style.css)
+   ===================================================== */
+body.admin { background: var(--cream); }
+
+/* ---- แถบด้านบน ---- */
+.admin-top { background: #14110d; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 20; }
+.admin-top-inner { display: flex; align-items: center; gap: 22px; padding: 10px 0; flex-wrap: wrap; }
+.admin-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: .3em; color: #fff; }
+.admin-brand:hover { text-decoration: none; }
+.admin-brand span { font-family: 'Noto Sans Thai', sans-serif; font-size: .65rem; letter-spacing: .2em; color: var(--gold); border: 1px solid var(--gold); padding: 1px 6px; border-radius: 4px; vertical-align: middle; margin-left: 6px; }
+.admin-nav { display: flex; gap: 4px; flex-wrap: wrap; flex: 1; }
+.admin-nav a, .admin-user a { color: #d9cdb4; padding: 7px 12px; border-radius: 6px; font-size: .92rem; }
+.admin-nav a:hover, .admin-user a:hover { background: #2a241c; text-decoration: none; color: #fff; }
+.admin-nav a.active, .admin-user a.active { background: var(--gold); color: #fff; }
+.admin-user { display: flex; gap: 2px; flex-wrap: wrap; }
+.admin-user a { font-size: .85rem; color: #a99d85; }
+
+.admin-main { padding-top: 28px; }
+.admin-foot { text-align: center; color: var(--muted); font-size: .85rem; padding: 24px 0 36px; }
+
+/* ---- หน้า Login ---- */
+body.admin-login { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 30% 20%, #2b241a, #14110d 70%); padding: 20px; }
+.login-card { background: var(--cream); border-radius: 12px; padding: 34px 30px; width: min(380px, 100%); border-top: 4px solid var(--gold); box-shadow: 0 20px 50px rgba(0,0,0,.45); }
+.login-logo { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; letter-spacing: .4em; text-align: center; margin-right: -.4em; }
+.login-sub { text-align: center; color: var(--muted); margin: 0 0 18px; font-size: .9rem; }
+.login-back { text-align: center; margin: 18px 0 0; font-size: .9rem; }
+.btn-block { display: block; width: 100%; margin-top: 20px; padding: 11px; }
+
+/* ---- การ์ดสถิติ ---- */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; margin-bottom: 28px; }
+.stat { background: #14110d; color: #fff; border-radius: 10px; padding: 18px 20px; border-left: 4px solid var(--gold); }
+.stat .label { color: #b9ae9b; font-size: .82rem; }
+.stat .value { font-family: 'Cormorant Garamond', serif; font-size: 2rem; line-height: 1.2; color: #f1dfb2; }
+.stat .sub { color: #8f8472; font-size: .78rem; }
+.stat.warn { border-left-color: #d7863a; }
+
+/* ---- แผงเนื้อหา ---- */
+.panel { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; margin-bottom: 24px; }
+.panel h3 { margin: 0 0 12px; font-size: 1.25rem; }
+.panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.panel table { border: 0; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; }
+.table-wrap table { min-width: 560px; }
+
+/* ---- แถบค้นหา/กรอง ---- */
+.search-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; align-items: center; }
+.search-bar input[type=text], .search-bar select { width: auto; flex: 1 1 180px; min-width: 140px; }
+.search-bar .btn { flex: 0 0 auto; }
+
+/* ---- ป้ายสต็อก ---- */
+.stock-ok { color: var(--ok); font-weight: 500; }
+.stock-low { color: #c26a12; font-weight: 600; }
+.stock-out { color: var(--danger); font-weight: 600; }
+.log-plus { color: var(--ok); font-weight: 600; }
+.log-minus { color: var(--danger); font-weight: 600; }
+.tag { display: inline-block; padding: 1px 9px; border-radius: 999px; font-size: .78rem; background: #efe7d6; color: var(--gold-dark); }
+
+/* ---- แบ่งหน้า ---- */
+.pager { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+.pager a, .pager span { padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: #fff; font-size: .9rem; }
+.pager span.cur { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+/* ---- กราฟแท่งรายงาน (CSS ล้วน) ---- */
+.chart { display: flex; align-items: flex-end; gap: 6px; height: 220px; padding: 10px 4px 0; overflow-x: auto; border-bottom: 1px solid var(--line); }
+.bar-col { flex: 1 0 28px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; min-width: 28px; }
+.bar { width: 100%; max-width: 46px; background: linear-gradient(180deg, var(--gold), var(--gold-dark)); border-radius: 4px 4px 0 0; min-height: 2px; }
+.bar.zero { background: var(--line); }
+.bar-val { font-size: .66rem; color: var(--muted); margin-bottom: 3px; white-space: nowrap; }
+.chart-labels { display: flex; gap: 6px; padding: 6px 4px 0; overflow-x: auto; }
+.chart-labels span { flex: 1 0 28px; min-width: 28px; text-align: center; font-size: .68rem; color: var(--muted); }
+.tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+
+/* ---- ฟอร์มแถวเดียว ---- */
+.row-form { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
+.row-form > div { flex: 1 1 160px; }
+.row-form label { margin-top: 0; }
+
+@media (max-width: 860px) {
+    .panel-grid { grid-template-columns: 1fr; }
+    .admin-top { position: static; }
+    .admin-nav { order: 3; flex-basis: 100%; }
+    .admin-user { margin-left: auto; }
+}
+@media (max-width: 520px) {
+    .stat .value { font-size: 1.6rem; }
+    h1 { font-size: 1.6rem; }
+}
+
+/* ---- หน้ารูปภาพสินค้า ---- */
+.thumb-lg { width: 90px; height: 90px; }
+.muted { color: var(--muted); }
+code { background: #f3ede4; padding: 1px 6px; border-radius: 4px; font-size: .88em; word-break: break-all; }
+.howto { margin: 0 0 10px; padding-left: 20px; }
+.howto li { margin: 4px 0; }
+.file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+.file-item { border: 1px solid var(--line); border-radius: 8px; padding: 8px; text-align: center; background: #fff; }
+.file-item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 6px; background: #f3ede4; }
+.file-item span { display: block; font-size: .78rem; margin-top: 6px; word-break: break-all; color: var(--muted); }
